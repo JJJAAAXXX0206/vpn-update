@@ -1,10 +1,10 @@
 {
   "android": {
-    "build": 1006,
+    "build": 1008,
     "url": "https://raw.githubusercontent.com/JJJAAAXXX0206/vpn-update/main/NL-VPN.apk"
   },
   "windows": {
-    "build": 1003,
+    "build": 1005,
     "url": "https://raw.githubusercontent.com/JJJAAAXXX0206/vpn-update/main/NL-VPN.exe"
   }
 }
