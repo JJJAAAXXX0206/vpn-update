@@ -1,9 +1,10 @@
 #!/bin/bash
 # Installs the Nazorat relay (live screen view for the supervised phone) on the VPN server.
-# Usage (as root):  curl -fsSL https://raw.githubusercontent.com/JJJAAAXXX0206/vpn-update/main/nazorat/install.sh | bash -s NAME:CODE
+# Usage (as root):  curl -fsSL https://raw.githubusercontent.com/JJJAAAXXX0206/vpn-update/main/nazorat/install.sh | bash -s NAME:CODE   (or: bash install.sh NAME CODE)
 # Does not touch 3x-ui / the VPN. Ports: 8443 (HTTPS), 8088 (HTTP fallback).
 set -u
-KEYS="${1:?usage: install.sh name:code}"
+KEYS="${1:?usage: install.sh name:code  (or: install.sh name code)}"
+[ -n "${2:-}" ] && KEYS="$1:$2"
 BASE=https://raw.githubusercontent.com/JJJAAAXXX0206/vpn-update/main/nazorat
 exec > >(tee /root/nazorat-install.log) 2>&1
 
